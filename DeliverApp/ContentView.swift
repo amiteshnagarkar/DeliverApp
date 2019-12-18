@@ -10,7 +10,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        
+        HStack {
+          
+        //need to change the blue colour to black
+        Button(action: {
+            // What to perform
+        }) {
+             Image("buy").frame(width:80, height: 80)
+                
+        
+        }
+            
+        Button(action: {
+            // What to perform
+        }) {
+             Image("sell").frame(width:80, height: 80)
+        }
+            
+            
+        }
     }
 }
 
