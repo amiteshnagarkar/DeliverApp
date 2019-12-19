@@ -10,27 +10,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
-        HStack {
-          
-        //need to change the blue colour to black
-        Button(action: {
-            // What to perform
-        }) {
-             Image("buy").frame(width:80, height: 80)
+        NavigationView{
+            ZStack {
+                Color.gray
                 
+                HStack{
+                //button only works once?
+                NavigationLink (destination: buyer()) {
+                    Image("buy")
+                }
+                
+                 NavigationLink (destination: buyer()) {
+                                   Image("sell")
+                               }
+            }.navigationBarTitle("Home").edgesIgnoringSafeArea(.all)
+             
+        }
         
         }
-            
-        Button(action: {
-            // What to perform
-        }) {
-             Image("sell").frame(width:80, height: 80)
-        }
-            
-            
-        }
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -38,3 +35,30 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+}
+
+/*
+
+HStack {
+  
+//need to change the blue colour to black
+Button(action: {
+    // What to perform
+}) {
+     Image("buy").frame(width:80, height: 80)
+        
+
+}
+    
+Button(action: {
+    // What to perform
+}) {
+     Image("sell").frame(width:80, height: 80)
+}
+    
+    
+}
+ 
+ */
+
+
