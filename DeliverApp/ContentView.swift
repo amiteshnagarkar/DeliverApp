@@ -20,7 +20,7 @@ struct ContentView: View {
                     Image("buy")
                 }
                 
-                 NavigationLink (destination: buyer()) {
+                 NavigationLink (destination: seller()) {
                                    Image("sell")
                                }
             }.navigationBarTitle("Home").edgesIgnoringSafeArea(.all)

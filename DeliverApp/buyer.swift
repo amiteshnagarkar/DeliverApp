@@ -14,12 +14,22 @@ struct buyer: View {
             Color.pink
             VStack{
             
-                Text("Testing").foregroundColor(.white)
+                 HStack{
+                        //need to add correct destination
+                NavigationLink (destination: buyer()) {
+                Image("search")}
+                                     
+            NavigationLink (destination: seller()) {
+                Image("add")
+                                                    }
+                                 }
                 
-            }.navigationBarTitle("Detail")
+            }.navigationBarTitle("Welcome Buyer")
             
         }.edgesIgnoringSafeArea(.all)
-         //Image("buy")
+        
+    
+         
     }
 }
 
