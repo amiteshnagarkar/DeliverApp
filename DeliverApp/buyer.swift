@@ -16,7 +16,7 @@ struct buyer: View {
             
                  HStack{
                         //need to add correct destination
-                NavigationLink (destination: buyer()) {
+                NavigationLink (destination: search()) {
                 Image("search")}
                                      
             NavigationLink (destination: seller()) {
