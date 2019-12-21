@@ -11,6 +11,7 @@ import SwiftUI
  
  struct SearchBar: UIViewRepresentable {
     
+    //@Binding lets us declare that the value actually comes from elsewhere, and should be shared in both places.
     @Binding var text: String
     
     class Coordinator: NSObject, UISearchBarDelegate {

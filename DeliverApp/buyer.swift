@@ -11,7 +11,7 @@ import SwiftUI
 struct buyer: View {
     var body: some View {
         ZStack{
-            Color.pink
+            Color.black
             VStack{
             
                  HStack{

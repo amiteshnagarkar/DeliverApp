@@ -10,6 +10,7 @@ import SwiftUI
 
 struct search: View {
     
+    //the @state means this changes as the program is run.
     @State private var searchTerm: String = ""
     
     let names = ["Amitesh", "Bat", "Cat", "Dog", "Elephant", "Jack", "Jerry"]
@@ -18,6 +19,14 @@ struct search: View {
     var body: some View {
         
         VStack{
+         
+            HStack{
+                NavigationLink (destination: Map()) {
+            Image("map")}
+                
+            }
+            
+            
         SearchBar(text: $searchTerm )
         List {
             

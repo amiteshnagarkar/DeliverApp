@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             ZStack {
-                Color.gray
+                Color.black
                 
                 HStack{
                 //button only works once?

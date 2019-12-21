@@ -11,7 +11,7 @@ import SwiftUI
 struct seller: View {
     var body: some View {
         ZStack{
-            Color.pink
+            Color.black
             VStack{
             
                 Text("Testing").foregroundColor(.white)
