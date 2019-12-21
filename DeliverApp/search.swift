@@ -21,7 +21,7 @@ struct search: View {
         VStack{
          
             HStack{
-                NavigationLink (destination: Map()) {
+                NavigationLink (destination: ContentViewww()) {
             Image("map")}
                 
             }
