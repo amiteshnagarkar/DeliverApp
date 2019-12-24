@@ -111,17 +111,25 @@ struct MapView: UIViewRepresentable {
         }
         
         func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            
+            let view = MKAnnotationView()
+            view.image = UIImage(named: "locationpin")
+            return view
+            
+            /*
             guard let annotation = annotation as? LandmarkAnnotation else { return nil }
             let identifier = "Annotation"
             var annotationView: MKMarkerAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
             if annotationView == nil {
                 annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                annotationView?.image = UIImage(named: "locationpin")
                 annotationView?.canShowCallout = true
                 annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             } else {
                 annotationView?.annotation = annotation
             }
             return annotationView
+ */
         }
     }
     
