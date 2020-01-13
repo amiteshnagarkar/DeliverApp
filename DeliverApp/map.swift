@@ -112,11 +112,13 @@ struct MapView: UIViewRepresentable {
         
         func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
             
+            /*
             let view = MKAnnotationView()
             view.image = UIImage(named: "locationpin")
             return view
+            */
             
-            /*
+            //fix this - shows "locationpin image & red pin image at same time"
             guard let annotation = annotation as? LandmarkAnnotation else { return nil }
             let identifier = "Annotation"
             var annotationView: MKMarkerAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
@@ -129,7 +131,7 @@ struct MapView: UIViewRepresentable {
                 annotationView?.annotation = annotation
             }
             return annotationView
- */
+ 
         }
     }
     
