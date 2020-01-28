@@ -27,8 +27,12 @@ struct ContentViewww: View {
         Landmark(name: "Sainsbury's Local", location: .init(latitude: 52.046917, longitude: -0.678846))
     ]
     
+    //When you initialize a property that's marked @State, you're not actually creating your own variable, but rather prompting SwiftUI to create "something" in the background that stores what you set and monitors it from now on! Your @State var just acts as a delegate to access this wrapper. Every time your @State variable is written, SwiftUI will know as it is monitoring it. It will also know whether the @State variable was read from the View's body. Using this information, it will be able to recompute any View having referenced a @State variable in its body after a change to this variable.
+    // the "?" tells me that is an optional
+    //"nil" means there is no value
     @State var selectedLandmark: Landmark? = nil
     
+    //places a map and the button "next" in the view
     var body: some View {
         ZStack {
             MapView(landmarks: $landmarks,
